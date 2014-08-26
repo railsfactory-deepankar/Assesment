@@ -1,4 +1,6 @@
 class OrdersController < ApplicationController
+  skip_before_action :authorize, only: [:new, :create]
+
   include CurrentCart
   before_action :set_cart, only: [:new, :create]
 
@@ -38,6 +40,8 @@ class OrdersController < ApplicationController
       if @order.save
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
+        OrderNotifier.received(@order).deliver
+
         format.html { redirect_to store_url, notice: 'Thank you for your order.' }
 
         format.html { redirect_to @order, notice: 'Order was successfully created.' }
