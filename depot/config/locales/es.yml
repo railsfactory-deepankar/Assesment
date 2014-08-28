@@ -8,6 +8,9 @@ es:
       questions:   "Preguntas"
       news:        "Noticias"
       contact:     "Contacto"
+      orders:      "órdenes"
+      products:    "productos"
+      users:       "usuarios"
 
   store:
     index:
@@ -49,6 +52,14 @@ es:
       header:
         one:   "1 error ha impedido que este %{model} se guarde"
         other: "%{count} errores han impedido que este %{model} se guarde"
+
+  questions:
+    new:
+      legend:       "No dude en enviar sus preguntas"
+    form:
+      name:         "Nombre"
+      mail_id:      "E-mail"
+      ques:         "pregunta"
 
   
   thanks:        "Gracias por su pedido"

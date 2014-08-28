@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+ 
 .locale {
    float: right;
    margin: -0.25em 0.1em;
@@ -85,17 +86,22 @@
 
 #columns {
 	background: #141;
+
 	#main {
+		
 		margin-left: 17em;
 		padding: 1em;
 		background: white;
 	}
 
 	#side {
+
 		float: left;
 		padding: 1em 2em;
 		width: 13em;
 		background: #141;
+		height: 500px;
+
 		form, div {
 			display: inline;
 		}
@@ -131,11 +137,15 @@
 		padding: 1em 2em;
 		width: 13em;
 		background: #141;
-		padding-top:0;
+		height: 500px;
+
 		ul {
+		
 			padding: 0;
+
 			li {
 				list-style: none;
+
 				a {
 					color: #bfb;
 					font-size: small;

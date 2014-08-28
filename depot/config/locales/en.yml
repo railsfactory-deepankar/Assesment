@@ -29,6 +29,10 @@ en:
       questions:   "Questions"
       news:        "News"
       contact:     "Contact"
+      orders:       "orders"
+      products:    "products"
+      users:       "users"
+
 
   store:
     index:
@@ -58,6 +62,13 @@ en:
       pay_type:     "Pay with"
       pay_prompt_html: "Select a payment method"
       submit:       "Place Order"
+  questions:
+    new:
+      legend:       "Feel free to post your questions"
+    form:
+      name:         "Name"
+      email:        "E-mail"
+      questions:    "Question"
 
   thanks:         "Thank you for your order"
 

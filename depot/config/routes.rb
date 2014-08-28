@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :contacts
+
+  resources :news
+
+  resources :questions
+
   get 'admin' => 'admin#index'
   controller :sessions do
    get 'login' => :new
