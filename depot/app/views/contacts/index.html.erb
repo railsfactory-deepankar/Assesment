@@ -23,6 +23,6 @@
 </table>
 
 <br>
-<% if session[:user_id] %>
+<% if (user_signed_in? && current_user.role == 'admin') %>
 <%= link_to 'New Contact', new_contact_path %>
 <%end%>

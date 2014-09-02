@@ -8,6 +8,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= controller.controller_name %>">
+  <% if user_signed_in? %>
+<div class ="layout">
+    
+<%= link_to "sign out", destroy_user_session_path, :method =>:delete %>
+<% else %>
+ <%= link_to "sign up", new_user_registration_path%> or <%= link_to "sign in", new_user_session_path %>
+<% end %>
   <div id="banner">
    <%= form_tag store_path, class: 'locale' do %>
     <%= select_tag 'set_locale',
@@ -18,8 +25,8 @@
 <% end %>
 
    
-   <center><%= @page_title || t('.title') %></center>
-  
+   <center><b><u><%= @page_title || t('.title') %></u><b></center>
+    
   </div>
   
     <div id="columns">
@@ -30,7 +37,7 @@
           <% end %>
         <% end %>
         <ul>
-          <% if session[:user_id] %>
+          <% if (user_signed_in? && current_user.role == 'admin') %>
           <li><%=link_to t('.home'), admin_path %></li>
           <li><%=link_to t('.questions'), questions_path %></li>
           <li><%=link_to t('.news'), news_index_path %></li>
@@ -46,7 +53,7 @@
         </ul>
       </div>
     </div>
-      <% if session[:user_id] %>
+      <% if (user_signed_in? && current_user.role == 'admin') %>
       <div id="columns">
       <div id="side1">
         
@@ -55,7 +62,7 @@
             <li><%= link_to t('.products'), products_path %></li>
             <li><%= link_to t('.users'), users_path %></li>
           </ul>
-          <%= button_to 'Logout', logout_path, method: :delete %>
+          
         
 
       </div>

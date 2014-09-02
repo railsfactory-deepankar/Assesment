@@ -36,11 +36,4 @@ how to work with Ubuntu from the scratch.
 image_url: 'ubuntu.jpeg',
 price: 79.36)
 #.  .  .
-Product.create!(title: 'Denim Jeans',
-description:
-%{<p>
-Stylish Designer wear jeans from Denims inan affordable 
-price
-</p>},
-image_url: 'denim.jpg',
-price: 67.95)
+

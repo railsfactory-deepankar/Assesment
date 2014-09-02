@@ -21,7 +21,7 @@
 
 .depot_form {
     fieldset {
-    	background: #efe;
+    	background:FF9999 ;
     	legend {
       		color: #dfd;
 	  		background: #141;
@@ -51,21 +51,22 @@
 }
 
 #banner {
-    background: #9c9;
+    background-image: url('image.jpeg');
     padding: 10px;
 	border-bottom: 2px solid;
 	font: small-caps 40px/40px "Times New Roman", serif;
-	color: #282;
+	color: #8B0000;
 	text-align: center;
+
 	height: 3em;
 
     img {
     
       
-      
+        width: 800px;
 	   	margin-left: 10px;
 	   	margin-right: 90px;
-		height: 60px;
+		height: 100px;
 	}
 	h2 {
 	
@@ -91,7 +92,8 @@
 		
 		margin-left: 17em;
 		padding: 1em;
-		background: white;
+		background-color: #FFCCCC;
+		height: 500px
 	}
 
 	#side {
@@ -99,7 +101,7 @@
 		float: left;
 		padding: 1em 2em;
 		width: 13em;
-		background: #141;
+		background:  	#280000 ;
 		height: 500px;
 
 		form, div {
@@ -136,7 +138,7 @@
 		float: right;
 		padding: 1em 2em;
 		width: 13em;
-		background: #141;
+		background:  	#280000 ;
 		height: 500px;
 
 		ul {
