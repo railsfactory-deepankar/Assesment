@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :news
 
   resources :questions
+  resources :mycart
 
   get 'admin' => 'admin#index'
   controller :sessions do

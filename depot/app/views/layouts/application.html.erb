@@ -47,6 +47,8 @@
           <li><%=link_to t('.questions'), new_question_path %></li>
           <li><%=link_to t('.news'), news_index_path %></li>
           <li><%=link_to t('.contacts'), contacts_path %></li>
+          <li><%=link_to 'mycart', mycart_index_path %></li>
+           <li><%= link_to 'Profile', current_user %></li>
           <%end%>
           
           
